@@ -28,3 +28,25 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+suggest going to the help for read.pdb to see what is inside the pdb object
+
+```{r}
+ids <- c("1TND_B","1AGR_A","1TAG_A","1GG2_A","1KJY_A","4G5Q_A")
+#selecting chains _A or _B when we say split = TRUE
+files <- get.pdb(ids, split = TRUE)
+```
+
+```{r}
+source("https://bioconductor.org/biocLite.R")
+biocLite("muscle")
+```
+
+
+```{r}
+pdbs <- pdbaln(files, fit = TRUE) #pdbaln superimposes all chains together
+pdbs
+```
+
+
+
