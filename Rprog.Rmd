@@ -48,5 +48,7 @@ pdbs <- pdbaln(files, fit = TRUE) #pdbaln superimposes all chains together
 pdbs
 ```
 
+VMD also lists what you selected in the command prompt
+
 
 
